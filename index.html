@@ -22,11 +22,11 @@
     </script>
     <script src="https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js"></script>
     <script>
-      mixpanel.init("958b76b27302f332f6244250401a4825", { debug: true });
+      window.addEventListener("DOMContentLoaded", () => {
+        mixpanel.init("958b76b27302f332f6244250401a4825", { debug: true });
 
-      mixpanel.track("Page Loaded");
+        mixpanel.track("Page Loaded");
 
-      document.addEventListener("DOMContentLoaded", () => {
         const btn = document.getElementById("dead-button");
         if (btn) {
           btn.addEventListener("click", () => {
