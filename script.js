@@ -6,7 +6,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const btn = document.querySelector("#dead-button2"); // Using ID selector
   if (btn) {
     btn.addEventListener("click", function () {
+      console.log("Clicked");
       if (window.clarity) {
+        console.log("It's in here");
         window.clarity("event", "DeadButton2Clicked", {
           reason: "user clicked second button",
           source: "HTML button",
