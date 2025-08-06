@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Home - My GitHub Website with Clarity</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js"></script>
     <!-- Microsoft Clarity Tracking Code -->
     <script type="text/javascript">
       (function (c, l, a, r, i, t, y) {
@@ -22,6 +21,7 @@
       })(window, document, "clarity", "script", "qqy5uayw4o");
     </script>
     <!-- Mixpanel SDK -->
+    <script src="https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js"></script>
     <script type="text/javascript">
       (function (e, a) {
         if (!a.__SV) {
@@ -86,7 +86,18 @@
         }
       })(document, window.mixpanel || []);
 
-      mixpanel.init("abc27fde1962f75d1741d0094f77e7b6", { debug: true });
+      mixpanel.init("abc27fde1962f75d1741d0094f77e7b6", {
+        debug: true,
+        autocapture: {
+          pageview: "full-url",
+          click: true,
+          input: true,
+          scroll: true,
+          submit: true,
+          capture_text_content: false,
+        },
+        record_sessions_percent: 1,
+      });
 
       mixpanel.track("Page Loaded");
 
