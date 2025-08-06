@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   console.log(
     "Page loaded. Test out the navigation and dead buttons for rage clicking."
   );
-  mixpanel.init("958b76b27302f332f6244250401a4825", { debug: true });
+  mixpanel.init("abc27fde1962f75d1741d0094f77e7b6", { debug: true });
 
   mixpanel.track("Page Loaded");
 
