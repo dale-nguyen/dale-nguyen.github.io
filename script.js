@@ -9,10 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
       console.log("Clicked");
       if (window.clarity) {
         console.log("It's in here");
-        window.clarity("event", "DeadButton2Clicked", {
-          reason: "user clicked second button",
-          source: "HTML button",
-        });
+        window.clarity("event", "clickDeadBtn");
       }
       alert("This button is also dead!");
     });
