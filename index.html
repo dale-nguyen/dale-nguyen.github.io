@@ -90,7 +90,7 @@
       mixpanel.track("Page Loaded");
 
       document.addEventListener("DOMContentLoaded", () => {
-        const btn = document.getElementById("track-btn");
+        const btn = document.getElementById("dead-button");
         btn.addEventListener("click", () => {
           mixpanel.track("Clicked Button", {
             source: "HTML test project",
@@ -114,7 +114,11 @@
         This is the home page for testing Microsoft Clarity integration and
         navigation.
       </p>
-      <button class="dead-button" onclick="alert('This button is dead!')">
+      <button
+        id="dead-button"
+        class="dead-button"
+        onclick="alert('This button is dead!')"
+      >
         Dead Button
       </button>
       <button class="dead-button" onclick="alert('This button is also dead!')">
