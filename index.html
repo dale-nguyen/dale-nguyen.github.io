@@ -21,22 +21,6 @@
       })(window, document, "clarity", "script", "qqy5uayw4o");
     </script>
     <script src="https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js"></script>
-    <script>
-      window.addEventListener("DOMContentLoaded", () => {
-        mixpanel.init("958b76b27302f332f6244250401a4825", { debug: true });
-
-        mixpanel.track("Page Loaded");
-
-        const btn = document.getElementById("dead-button");
-        if (btn) {
-          btn.addEventListener("click", () => {
-            mixpanel.track("Clicked Button", {
-              source: "HTML test project",
-            });
-          });
-        }
-      });
-    </script>
   </head>
   <body>
     <header>
